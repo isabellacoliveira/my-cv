@@ -9,7 +9,7 @@ function AppRoutes() {
         <>        
         <Router>
             <Routes>
-                <Route path="/" element={<Header />} >
+                <Route path="/" element={<PaginaPrincipal />} >
                     <Route path="/home" element={<PaginaPrincipal />} />
                     <Route path="/perfil" element={<MeuPerfil />} />
                     <Route path="*" element={<NaoEncontrada />} />

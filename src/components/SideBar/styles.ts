@@ -3,7 +3,7 @@ import styled from 'styled-components';
   /* left: ${props => props.sidebar ? '0' : '-100%'}; */
 
 export const Container = styled.div`
-  background-color: #171923;
+  background-color: ${props => props.theme.colors.primary};
   position: fixed;
   height: 100%;
   top: 0px;

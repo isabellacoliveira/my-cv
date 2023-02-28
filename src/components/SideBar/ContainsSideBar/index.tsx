@@ -1,11 +1,20 @@
 
-import React, { useState } from 'react'
+import { useContext, useState } from 'react'
 import { Container } from './styles'
-import { FaBars } from 'react-icons/fa'
+import { FaBars, FaAlignJustify } from 'react-icons/fa'
 import Sidebar from '..'; 
+import Switch from 'react-switch'; 
+import { ThemeContext } from 'styled-components';
+import { shade } from 'polished'; 
 
-const Header = () => {
+
+interface Props {
+  toggleTheme(): void; 
+}
+
+const Header = ({ toggleTheme }: Props) => {
   const [sidebar, setSidebar] = useState(false)
+  const { colors, title } = useContext(ThemeContext); 
 
   const showSiderbar = () => setSidebar(!sidebar)
 
@@ -13,6 +22,17 @@ const Header = () => {
     <Container>
       <FaBars onClick={showSiderbar} />
       {sidebar && <Sidebar active={setSidebar} />}
+      <Switch 
+        onChange={toggleTheme}
+        checked={title === 'dark'}
+        checkedIcon={false}
+        uncheckedIcon={false}
+        height={10}
+        width={40}
+        handleDiameter={20}
+        onColor={shade(0.1, colors.primary)}
+        offColor={colors.secundary}
+      />
     </Container>
   )
 }

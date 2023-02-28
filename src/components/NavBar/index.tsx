@@ -6,7 +6,7 @@ const NavBar = () => {
            <nav>
              <img src="" alt="" />
              <input type="search" />
-             <button>menu</button>
+             {/* <button>menu</button> */}
            </nav>
 			<Outlet />
 		</>

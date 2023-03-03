@@ -10,10 +10,13 @@ import {
   FaChartBar
 } from 'react-icons/fa'
 import SidebarItem from './SideBarItem'
-import { Container, Content } from './styles'
+import { Container, Content, Me } from './styles'; 
+import Isa from '../../assets/isa.jpg'; 
+import { useNavigate } from 'react-router-dom';
 
 
 const Sidebar = ({ active }: any) => {
+    const navigate = useNavigate();
 
   const closeSidebar = () => {
     active(false)
@@ -21,10 +24,11 @@ const Sidebar = ({ active }: any) => {
 
   return (
     // sidebar={active}
-    <Container >
+    <Container>
       <FaTimes onClick={closeSidebar} />  
       <Content>
-        <SidebarItem Icon={FaHome} Text="Home" />
+        <Me src={Isa} />
+        <SidebarItem Icon={FaHome} onClick={navigate('/home')} Text="Home" />
         <SidebarItem Icon={FaChartBar} Text="Statistics" />
         <SidebarItem Icon={FaUserAlt} Text="Users" />
         <SidebarItem Icon={FaEnvelope} Text="Mail" />

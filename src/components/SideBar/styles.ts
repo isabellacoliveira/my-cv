@@ -9,6 +9,7 @@ export const Container = styled.div`
   top: 0px;
   left: 0px;
   width: 300px;
+  text-align: center;
   animation: showSidebar .4s;
   > svg {
     position: fixed;
@@ -19,6 +20,7 @@ export const Container = styled.div`
     margin-left: 32px;
     cursor: pointer;
   }
+  
   @keyframes showSidebar {
     from {
       opacity: 0;
@@ -33,4 +35,11 @@ export const Container = styled.div`
 
 export const Content = styled.div`
   margin-top: 100px;
+`;
+
+export const Me = styled.img`
+    border-radius: 50%;
+    width: 250px;
+    height: 250px;
+
 `;

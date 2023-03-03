@@ -1,8 +1,8 @@
 import styled from "styled-components";
 
 export const Container = styled.div`
-  height: 100px;
   display: flex;
+  width: 10px; 
   background-color: ${props => props.theme.colors.primary};
   box-shadow: 0 0 20px 3px;
   > svg {
@@ -19,3 +19,7 @@ export const Container = styled.div`
     
   }
 `;
+
+export const Button = styled.div`
+  display: flex;
+`

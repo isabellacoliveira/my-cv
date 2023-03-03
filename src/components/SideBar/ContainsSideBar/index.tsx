@@ -1,7 +1,7 @@
 
 import { useContext, useState } from 'react'
 import { Container } from './styles'
-import { FaBars, FaAlignJustify } from 'react-icons/fa'
+import { FaBars } from 'react-icons/fa'
 import Sidebar from '..'; 
 import Switch from 'react-switch'; 
 import { ThemeContext } from 'styled-components';
@@ -13,15 +13,10 @@ interface Props {
 }
 
 const Header = ({ toggleTheme }: Props) => {
-  const [sidebar, setSidebar] = useState(false)
   const { colors, title } = useContext(ThemeContext); 
-
-  const showSiderbar = () => setSidebar(!sidebar)
-
   return (
+    <>   
     <Container>
-      <FaBars onClick={showSiderbar} />
-      {sidebar && <Sidebar active={setSidebar} />}
       <Switch 
         onChange={toggleTheme}
         checked={title === 'dark'}
@@ -34,6 +29,7 @@ const Header = ({ toggleTheme }: Props) => {
         offColor={colors.secundary}
       />
     </Container>
+    </>
   )
 }
 

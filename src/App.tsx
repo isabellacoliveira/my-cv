@@ -8,15 +8,11 @@ import dark from './styles/themes/dark';
 function App() {
   const [theme, setTheme] = useState(light);
 
-  const toggleTheme = () => {
-    setTheme(theme.title === 'light' ? dark : light);
-  }; 
-
   return (
     <ThemeProvider theme={theme}>
     <div className="App">
      <AppRoutes />
-     <Header toggleTheme={toggleTheme}/>
+    
     </div>
     </ThemeProvider>
   );

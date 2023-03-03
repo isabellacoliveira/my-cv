@@ -39,7 +39,7 @@ export const Content = styled.div`
 
 export const Me = styled.img`
     border-radius: 50%;
-    width: 250px;
-    height: 250px;
-
+    width: 150px;
+    height: 150px;
+    margin-bottom: 10px;
 `;

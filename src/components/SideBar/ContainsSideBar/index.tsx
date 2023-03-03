@@ -12,7 +12,7 @@ interface Props {
   toggleTheme(): void; 
 }
 
-const Header = ({ toggleTheme }: Props) => {
+const ChangeTheme = ({ toggleTheme }: Props) => {
   const { colors, title } = useContext(ThemeContext); 
   return (
     <>   
@@ -33,4 +33,4 @@ const Header = ({ toggleTheme }: Props) => {
   )
 }
 
-export default Header
+export default ChangeTheme

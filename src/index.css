@@ -11,3 +11,37 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+
+
+*{
+  box-sizing: border-box;
+  font-family: 'Raleway', sans-serif;
+}
+
+:root {
+  --error: #FF0000;
+  --success: #02820E;
+  --open: #BB8700;
+  --modal-bg: #000000cc;
+  --box-shadow-color: #0000001a;
+  --absolute-light: #FFFFFF;
+  --base: #FEFEFE;
+  --light: #007AF2;
+  --light-00: #FAFAFA;
+  --light-01: #E0E4E7;
+  --light-02: #C9CED2;
+  --light-03: #AAB4C0;
+  --absolute-dark: #000000;
+  --dark-base: #303133;
+  --dark-00: #9F9F9F;
+  --dark-01: #6F6F6F;
+  --dark-02: #474747;
+  --dark-03: #333333;
+  --dark-04: #DDDDDD;
+  --text-800: #3F3951;
+  --primary-06: #1890FF;
+  --suporte-cta: #0079EA;
+  --suporte-feedback: #BD3636;
+  --suporte-menu-bar: #17120F;
+  font-size: 16px;
+}

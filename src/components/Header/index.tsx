@@ -1,9 +1,9 @@
 import { useState } from "react";
-import { FaBars } from "react-icons/fa";
 import { Outlet } from "react-router-dom";
 import Sidebar from "../SideBar";
 import Isa from '../../assets/isa.jpg'; 
-import { Header, Me } from "./styles";
+import { DivIcon, Header, Me, SearchBar } from "./styles";
+import GearIcon from '@rsuite/icons/Gear';
 
 export default function Cabecalho(){
     const [sidebar, setSidebar] = useState(false)
@@ -11,11 +11,16 @@ export default function Cabecalho(){
 
     return (
         <>        
-        <Header>      
-            <FaBars onClick={showSiderbar} />
-            {sidebar && <Sidebar active={setSidebar} />}
-            <input type="search" />
+        <Header>  
+            <DivIcon>
+                <GearIcon spin style={{ fontSize: '2em' }} onClick={showSiderbar} className="icon"/>  
+            </DivIcon>    
+            {sidebar && <Sidebar active={setSidebar} />}    
+            <form>    
+                <SearchBar type="search" placeholder="O que você deseja encontrar?" />           
+            </form>       
             <Me src={Isa} alt="" />
+
          </Header>
          <Outlet />
         </>

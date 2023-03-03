@@ -7,7 +7,7 @@ export const Container = styled.div`
   box-shadow: 0 0 20px 3px;
   > svg {
     position: fixed;
-    color: white;
+    color: #fff;
     width: 30px;
     height: 30px;
     margin-top: 32px;

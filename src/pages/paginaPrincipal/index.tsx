@@ -1,12 +1,10 @@
 import { useEffect, useState } from "react";
 import Linguagens from "../../components/Linguagem";
-import Header from "../../components/SideBar/ContainsSideBar";
+import Floor from "../../components/Rodape";
 import { useLinguagens } from "../../contexts/linguagensProvider";
 import dark from "../../styles/themes/dark";
 import light from "../../styles/themes/light";
-import Code from "../../assets/coed.webp";
-import { Coder, DivImgP, Paragrafo } from "./styles";
-import Carrossel from "../../components/Carrossel";
+import {  DivImgP, LingDiv, LinguagensDiv, Paragrafo, ProjetosLinguagemDiv, TituloDiv } from "./styles";
 
 export default function PaginaPrincipal(){
     const {linguagens, getLinguagens } = useLinguagens(); 
@@ -23,15 +21,23 @@ export default function PaginaPrincipal(){
         <div>
             {/* <Header toggleTheme={toggleTheme}/>  */}
             <DivImgP>
-                <Coder src={Code}  alt="" />
-                <Paragrafo>More about me...</Paragrafo>
+                <Paragrafo>Desenvolvedora Full-Stack</Paragrafo>
             </DivImgP>
-            <div>
-                <h5>Meus Projetos</h5>
-                {linguagens?.map((item) => (
-                    <Linguagens linguagem={item} />
-                ))}
-            </div>
+            <LinguagensDiv>
+                <TituloDiv>
+                    <h5>Meus Projetos</h5>
+                    <p>Olá! Seja bem-vindo(a) ao meu portifólio! Aqui você encontrará meus projetos feitos em <br/>
+                    diversas linguagens de progamação e frameworks diversos.</p>
+                </TituloDiv>
+                <LingDiv>
+                    {linguagens?.map((item) => (
+                    <ProjetosLinguagemDiv>
+                        <Linguagens linguagem={item} />
+                    </ProjetosLinguagemDiv>
+                    ))}
+                </LingDiv>
+            </LinguagensDiv>
+            <Floor />
         </div>
     )
 }

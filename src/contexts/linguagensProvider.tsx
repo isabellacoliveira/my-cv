@@ -27,7 +27,6 @@ export function LinguagensProvider({ children }: LinguagensProviderProps) {
 		return new Promise(() => {
 			Api.get<ILinguagens[]>("/linguagens")
 				.then((resposta) => {
-                    console.log(resposta.data);
 					setLinguagens(resposta.data);
 				})
 				.catch((error) => {

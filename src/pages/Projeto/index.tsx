@@ -1,10 +1,10 @@
 import Floor from "../../components/Rodape";
 
-export default function MeuPerfil(){
+export default function Projeto(){
     return (
         <>        
             <div>
-                meu perfil works
+                projeto works
             </div>
             <Floor />
         </>

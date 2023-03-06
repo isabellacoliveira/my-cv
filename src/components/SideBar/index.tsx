@@ -29,9 +29,8 @@ const Sidebar = ({ active }: any) => {
       <CloseIcon onClick={closeSidebar} />  
       <Content>
         <Me src={Isa} />
-        <SidebarItem Icon={FaHome} onClick={navigate('/home')} Text="Home" />
-        <SidebarItem Icon={FaChartBar} Text="Statistics" />
-        <SidebarItem Icon={FaUserAlt} Text="About me" />
+        <SidebarItem Icon={FaHome} onClick={() => navigate('/home')} Text="Home" />
+        <SidebarItem Icon={FaUserAlt} onClick={() => navigate('/aboutMe')} Text="About me" />
         <SidebarItem Icon={FaEnvelope} Text="Contact" />
         <SidebarItem Icon={FaRegCalendarAlt} Text="Calendar" />
         <SidebarItem Icon={FaIdCardAlt} Text="Work journey" />

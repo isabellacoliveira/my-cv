@@ -1,5 +1,7 @@
 import styled from "styled-components";
 
+
+
 export const DivIcon = styled.div`
     background-color: #fff;
 
@@ -22,12 +24,10 @@ export const Header = styled.nav`
         background-color: #000000;
 
     @media (max-width: 900px) {
-        background-color: blue;
-
+            
     }
 
     @media (min-width: 900px) {
-        /* background-color: red; */
     }
 `; 
 
@@ -45,6 +45,15 @@ export const SearchBar = styled.input`
   -webkit-transition: width 0.4s ease-in-out;
   transition: width 0.4s ease-in-out;
   font-family: 'Courier New';
+
+    
+     @media (max-width: 900px) {
+        width: 200px;
+    }
+
+    @media (min-width: 900px) {
+
+    }
 
   &:hover {
         transform: translateY(-4px);

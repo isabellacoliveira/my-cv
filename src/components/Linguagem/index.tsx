@@ -1,5 +1,6 @@
-import { Linguagem } from "./styles";
+import { DivLinguagem, Linguagem } from "./styles";
 import ILinguagens from "../../types/ILinguagens";
+import { Link } from "react-router-dom";
 
 interface LinguagemProps {
     linguagem: ILinguagens;
@@ -8,10 +9,14 @@ interface LinguagemProps {
 const Linguagens = ({ linguagem }: LinguagemProps) => {
   return (
     <>   
-     <Linguagem color={linguagem.cor} colorText={linguagem.corTexto}>
+    <DivLinguagem>
+     <Linguagem  color={linguagem.cor} colorText={linguagem.corTexto}>
+            <Link className="links" to={`/projetos/${linguagem.nome}`}>
                     <img src={linguagem.imagem} alt="pi" />
-                    <p>{linguagem.nome}</p>
+                    <p>{linguagem.nome}</p>	
+						</Link>
     </Linguagem>
+    </DivLinguagem>
     </>
   )
 }

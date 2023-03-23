@@ -3,10 +3,13 @@ import Cabecalho from "./components/Header";
 import { LinguagensProvider } from "./contexts/linguagensProvider";
 import Certifications from "./pages/certification";
 import LinguagemSelecionada from "./pages/LinguagemSelecionada";
-import MeuPerfil from "./pages/meuPerfil";
+import Skills from "./pages/Skills";
 import NaoEncontrada from "./pages/NaoEncontrada";
 import PaginaPrincipal from "./pages/paginaPrincipal";
 import Projeto from "./pages/Projeto";
+import ProfissionalExperience from "./pages/Profissional-Experience";
+import Training from "./pages/Training";
+import Floor from "./components/Rodape";
 
 function AppRoutes() {
 	return (
@@ -16,8 +19,10 @@ function AppRoutes() {
             <Routes>
                 <Route path="/" element={<Cabecalho />} >
                     <Route path="/home" element={<PaginaPrincipal />} />
-                    <Route path="/aboutMe" element={<MeuPerfil />} />
+                    <Route path="/skills" element={<Skills />} />
+                    <Route path="/training" element={<Training />} />
                     <Route path="/certifications" element={<Certifications />} />
+                    <Route path="/profissional-experience" element={<ProfissionalExperience />} />
                     <Route path="/projetos/:linguagem" element={<LinguagemSelecionada />}/>
                     <Route path="/projetos/:linguagem/:id" element={<Projeto />}/>
                     <Route path="*" element={<NaoEncontrada />} />

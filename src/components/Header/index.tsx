@@ -1,9 +1,6 @@
 import { useState } from "react";
-import { Outlet } from "react-router-dom";
-import Sidebar from "../SideBar";
-import Isa from '../../assets/isa.jpg'; 
-import { DivIcon, Header, Me, SearchBar } from "./styles";
-import GearIcon from '@rsuite/icons/Gear';
+import { Link, Outlet } from "react-router-dom";
+import { Header, HeaderRoutes } from "./styles";
 
 export default function Cabecalho(){
     const [sidebar, setSidebar] = useState(false)
@@ -12,14 +9,22 @@ export default function Cabecalho(){
     return (
         <>        
         <Header>  
-            <DivIcon>
+            {/* <DivIcon>
                 <GearIcon spin style={{ fontSize: '2em' }} onClick={showSiderbar} className="icon"/>  
             </DivIcon>    
             {sidebar && <Sidebar active={setSidebar} />}    
             <form>    
                 <SearchBar type="search" placeholder="O que você deseja encontrar?" />           
             </form>       
-            <Me src={Isa} alt="" />
+            <Me src={Isa} alt="" /> */}
+            <HeaderRoutes>
+                <Link className="links" to={"/home"}>About me</Link>
+                {/* mudar pra ingles */}
+                <Link className="links" to={"/training"}>Training</Link> 
+                <Link className="links" to={"/profissional-experience"}>Profissional Experience</Link>
+                <Link className="links" to={"/certifications"}>Certifications</Link>
+                <Link className="links" to={"/skills"}>Skills</Link>
+            </HeaderRoutes>
 
          </Header>
          <Outlet />

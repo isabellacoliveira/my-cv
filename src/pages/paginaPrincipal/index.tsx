@@ -1,10 +1,13 @@
 import { useEffect, useState } from "react";
+import FaleComigo from "../../components/FaleComigo";
 import Linguagens from "../../components/Linguagem";
 import Floor from "../../components/Rodape";
 import { useLinguagens } from "../../contexts/linguagensProvider";
 import dark from "../../styles/themes/dark";
 import light from "../../styles/themes/light";
-import {  DivImgP, LingDiv, LinguagensDiv, Paragrafo, ProjetosLinguagemDiv, TituloDiv } from "./styles";
+import Me from '../../assets/isa.jpg';
+import {  AboutMe, DivImgP, LingDiv, LinguagensDiv, Paragrafo, ProjetosLinguagemDiv, Title, TituloDiv } from "./styles";
+import Barra from "../../components/Barra";
 
 export default function PaginaPrincipal(){
     const {linguagens, getLinguagens } = useLinguagens(); 
@@ -21,14 +24,29 @@ export default function PaginaPrincipal(){
         <div>
             {/* <Header toggleTheme={toggleTheme}/>  */}
             <DivImgP>
-                <Paragrafo>Desenvolvedora Full-Stack</Paragrafo>
+                <Paragrafo>Full-Stack Developer</Paragrafo>
             </DivImgP>
+                <Barra Text="My Profile">My profile</Barra>
+            <AboutMe>
+                <div className="infos">
+                    <p>Full-Stack Developer</p>
+                    <h2>Isabella Cruz de Oliveira</h2>
+                    <h3>Graduating Systems Development Analyst</h3>
+                    <h3>18 years old</h3>
+                </div>
+                <div>
+                    <img src={Me} alt="Minha foto" />
+                </div>
+
+            </AboutMe>
             <LinguagensDiv>
                 <TituloDiv>
-                    <h5>Meus Projetos</h5>
-                    <p>Olá! Seja bem-vindo(a) ao meu portifólio! Aqui você encontrará meus projetos feitos em <br/>
-                    diversas linguagens de progamação e frameworks diversos.</p>
+                    <Barra Text="My Projects">My Projects</Barra>
+                    {/* traduzir isso */}
+                    <p>Hi! Welcome to my portfolio! Here you can find my projects and developments. <br/>
+                    Hope you can learn something</p>
                 </TituloDiv>
+                 
                 <LingDiv>
                     {linguagens?.map((item) => (
                     <ProjetosLinguagemDiv>
@@ -37,7 +55,9 @@ export default function PaginaPrincipal(){
                     ))}
                 </LingDiv>
             </LinguagensDiv>
+            <FaleComigo />
             <Floor />
+         
         </div>
     )
 }

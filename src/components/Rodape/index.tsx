@@ -4,7 +4,7 @@ export default function Floor() {
     
     return (
       <Rodap>
-          Desenvolvido por Isabella <br/>
+          Developed by Isabella <br/>
           2023
       </Rodap>
     );

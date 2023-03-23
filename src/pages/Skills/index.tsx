@@ -1,10 +1,10 @@
 import Floor from "../../components/Rodape";
 
-export default function MeuPerfil(){
+export default function Skills(){
     return (
         <>        
             <div>
-                meu perfil works
+                skills works
             </div>
             <Floor />
         </>

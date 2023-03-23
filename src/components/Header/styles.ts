@@ -1,7 +1,5 @@
 import styled from "styled-components";
 
-
-
 export const DivIcon = styled.div`
     background-color: #fff;
 
@@ -13,8 +11,7 @@ export const DivIcon = styled.div`
 export const Header = styled.nav`
         width: 100%;
         text-align: center;
-        justify-content: space-between;
-        flex-direction: row;
+        justify-content: center;
         display: flex;
         align-items: center;
         padding-top: 20px;
@@ -68,5 +65,14 @@ export const Me = styled.img`
     height:  50px;
 `;
 
+export const HeaderRoutes = styled.div`
+    justify-content: space-between;
+    display: flex;
+    .links{
+        color: #FFF;
+        text-decoration: none;
+        padding-right: 20px;
+    }
+`
 
 

@@ -76,7 +76,7 @@ export const TituloDiv = styled.div`
     `; 
 
 export const DivImgP = styled.div`
-    background-image: url("https://9elements.com/blog/content/images/2019/07/learn_code.png");
+    background-image: url("https://i2.wp.com/i.giphy.com/media/26tn33aiTi1jkl6H6/giphy-downsized.gif?w=770&ssl=1");
     background-repeat: no-repeat;
     width: 100%;
     background-size: 100%;
@@ -96,12 +96,39 @@ export const DivImgP = styled.div`
         padding-bottom: 20px;
      
     }
-
-
 `
 
 export const LingDiv = styled.div`
     flex-direction: column;
     display: flex;
     width: 25%;
+`
+
+export const AboutMe = styled.div`
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    margin-top: 50px;
+
+    img{
+        border-radius: 50%;
+        width: 200px;
+        height: 200px;
+
+    }
+
+    .infos{
+        margin-right: 20px;
+        margin-top: 50px;
+    }
+`
+
+export const Title = styled.div`
+    background-color:  #3A3335;
+    height: 90px;
+    text-align: center;
+    color: #fff;
+    padding-top: 25px;
+
+   
 `

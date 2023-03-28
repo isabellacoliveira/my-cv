@@ -23,6 +23,8 @@ function AppRoutes() {
                     <Route path="/training" element={<Training />} />
                     <Route path="/certifications" element={<Certifications />} />
                     <Route path="/profissional-experience" element={<ProfissionalExperience />} />
+                    <Route path="/draws" element={<NaoEncontrada />} /> 
+                    <Route path="/music" element={<NaoEncontrada />} />
                     <Route path="/projetos/:linguagem" element={<LinguagemSelecionada />}/>
                     <Route path="/projetos/:linguagem/:id" element={<Projeto />}/>
                     <Route path="*" element={<NaoEncontrada />} />

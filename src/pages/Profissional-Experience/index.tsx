@@ -2,10 +2,12 @@ import Floor from "../../components/Rodape";
 import Modal from "../../assets/modal.jpg";
 import { Container, Exp, Experiencia, Logo } from "./styles";
 import Progress from "../../components/ProgressBalls";
+import Barra from "../../components/Barra";
 
 export default function ProfissionalExperience(){
     return (
         <>
+        <Barra Text="My Profissional Experience"/>
         <Container>
         <Experiencia>
             <Exp>

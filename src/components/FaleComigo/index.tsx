@@ -67,6 +67,7 @@ export default function FaleComigo() {
                   placeholder="Type your message"
                   value={mensagem}
                   onChange={evento => setMensagem(evento.target.value)}/>
+                {/* TODO desabilitar o botao qnd nada estiver escrito */}
               <Send type="submit" >Send message</Send>
             </Contato>
         </ContatoDiv>

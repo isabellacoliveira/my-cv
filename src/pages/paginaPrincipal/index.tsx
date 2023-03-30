@@ -6,7 +6,7 @@ import { useLinguagens } from "../../contexts/linguagensProvider";
 import dark from "../../styles/themes/dark";
 import light from "../../styles/themes/light";
 import Me from '../../assets/isa.jpg';
-import {  AboutMe, DivImgP, LingDiv, LinguagensDiv, Paragrafo, ProjetosLinguagemDiv, Title, TituloDiv } from "./styles";
+import {  AboutMe, BotaoTemporario, DivImgP, LingDiv, LinguagensDiv, Paragrafo, ProjetosLinguagemDiv, Title, TituloDiv } from "./styles";
 import Barra from "../../components/Barra";
 
 export default function PaginaPrincipal(){
@@ -40,20 +40,23 @@ export default function PaginaPrincipal(){
 
             </AboutMe>
             <LinguagensDiv>
-                <TituloDiv>
                     <Barra Text="My Projects">My Projects</Barra>
+                <TituloDiv>
                     {/* traduzir isso */}
                     <p>Hi! Welcome to my portfolio! Here you can find my projects and developments. <br/>
                     Hope you can learn something</p>
+                    <BotaoTemporario>
+                        <a href="https://github.com/isabellacoliveira?tab=repositories" target={"_blank"}>My Projects</a>
+                    </BotaoTemporario>
                 </TituloDiv>
                  
-                <LingDiv>
+                {/* <LingDiv>
                     {linguagens?.map((item) => (
                     <ProjetosLinguagemDiv>
                         <Linguagens linguagem={item} />
                     </ProjetosLinguagemDiv>
                     ))}
-                </LingDiv>
+                </LingDiv> */}
             </LinguagensDiv>
             <FaleComigo />
             <Floor />

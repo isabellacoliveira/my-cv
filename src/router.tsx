@@ -10,6 +10,7 @@ import Projeto from "./pages/Projeto";
 import ProfissionalExperience from "./pages/Profissional-Experience";
 import Training from "./pages/Training";
 import Floor from "./components/Rodape";
+import Construcao from "./pages/Construcao";
 
 function AppRoutes() {
 	return (
@@ -21,7 +22,8 @@ function AppRoutes() {
                     <Route path="/home" element={<PaginaPrincipal />} />
                     <Route path="/skills" element={<Skills />} />
                     <Route path="/training" element={<Training />} />
-                    <Route path="/certifications" element={<Certifications />} />
+                    {/* <Route path="/certifications" element={<Certifications />} /> */}
+                    <Route path="/certifications" element={<Construcao />} />
                     <Route path="/profissional-experience" element={<ProfissionalExperience />} />
                     <Route path="/draws" element={<NaoEncontrada />} /> 
                     <Route path="/music" element={<NaoEncontrada />} />

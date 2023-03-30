@@ -13,8 +13,9 @@ export default function NaoEncontrada(){
         <>        
             <NaoEncontradaPage>
                 <img src={NotFound} alt="Página não encontrada" />
-                <p>Tem certeza que é isso que está procurando ? </p>
-                <BotaoVoltar onClick={navigation}>Voltar</BotaoVoltar>
+                <h5>Are you sure? what you are looking for?</h5>
+                <p>Sorry, we seem to be lost.</p>
+                <BotaoVoltar onClick={navigation}>Back</BotaoVoltar>
             </NaoEncontradaPage>
             <Floor />
         </>

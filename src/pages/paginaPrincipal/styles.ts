@@ -48,6 +48,12 @@ export const TituloDiv = styled.div`
     margin-top: 10px;
     margin-bottom: 10px;
     text-align: center;
+    align-items: center;
+
+    a{
+        text-decoration: none;
+        color: #fff;
+    }
 
     h5{
         font-family: 'Raleway';
@@ -59,7 +65,7 @@ export const TituloDiv = styled.div`
 
     @media (max-width: 900px) {
         p{
-            font-size: 13px;
+            font-size: 20px;
         }
     }
     
@@ -85,8 +91,8 @@ export const DivImgP = styled.div`
     padding-left: 20px;
     
     @media (max-width: 900px) {
-        min-height: 100px;
-        padding-top: 60px;
+        min-height: 200px;
+        padding-top: 160px;
 
     }
     
@@ -106,7 +112,6 @@ export const LingDiv = styled.div`
 
 export const AboutMe = styled.div`
     display: flex;
-    flex-direction: row;
     justify-content: center;
     margin-top: 50px;
 
@@ -114,12 +119,27 @@ export const AboutMe = styled.div`
         border-radius: 50%;
         width: 200px;
         height: 200px;
-
+        margin-bottom: 20px;
     }
+
+    @media (max-width: 900px) {
+        width: 100%;
+        flex-direction: column;
+        align-items: center;
+
+        .infos{
+            text-align: center;
+            padding-bottom: 30px;
+        }
+    }
+    
+    @media (min-width: 900px) {
+        flex-direction: row;
 
     .infos{
         margin-right: 20px;
         margin-top: 50px;
+    }
     }
 `
 
@@ -128,7 +148,19 @@ export const Title = styled.div`
     height: 90px;
     text-align: center;
     color: #fff;
-    padding-top: 25px;
-
-   
+    padding-top: 25px;   
 `
+
+// TODO tirar isso 
+ export const BotaoTemporario = styled.button`
+    width: 200px;
+    margin-bottom: 20px;
+    margin-top: 20px;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    border: none;
+    background-color: #4c956c;
+    border-radius: 40px;
+    color: #fff;
+    font-weight: bold;
+ `

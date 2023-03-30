@@ -18,7 +18,7 @@ export default function Cabecalho(){
             </form>       
             <Me src={Isa} alt="" /> */}
             <HeaderRoutes>
-                <Link className="links" to={"/home"}>About me</Link>
+                <Link className="links" to={"/"}>About me</Link>
                 {/* mudar pra ingles */}
                 <Link className="links" to={"/training"}>Training</Link> 
                 <Link className="links" to={"/profissional-experience"}>Profissional Experience</Link>

@@ -14,16 +14,16 @@ import Spring from "../../assets/spring.png"
 import Cplus from "../../assets/cplus.png"
 import Node from "../../assets/node.png"
 
-import { Language } from "./styles";
+import { Content, Language, Skill } from "./styles";
 import Barra from "../../components/Barra";
 
 export default function Skills(){
     return (
         <>        
-            <div>
+            <Content>
                 <Barra Text="My Skills"/>
                <p>Here you can see my Language Skills ! Im still studying to expand my career and knowledge.</p>
-               <div>
+               <Skill>
                     <h5>Front-End</h5>
                     <Language src={Html} alt="" />
                     <Language src={Css} alt="" />
@@ -41,15 +41,17 @@ export default function Skills(){
                     <h5>Mobile</h5>
                     <Language src={React} alt="" />
 
-               </div>
+               </Skill>
                <Barra Text="Studying"/>
+               <Skill>
                <p>And im studying...</p>
                 <Language src={Java} alt="" />
                 <Language src={Spring} alt="" />
                 <Language src={Cplus} alt="" />
                 <Language src={Node} alt="" />
+               </Skill>
 
-            </div>
+            </Content>
             <Floor />
         </>
     )

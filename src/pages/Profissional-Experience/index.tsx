@@ -11,20 +11,19 @@ export default function ProfissionalExperience(){
         <Container>
         <Experiencia>
             <Exp>
+                <div className="responsive">
                 <Progress />
-                <div>
-                    
                 </div>
                 <div>
                     <Logo src={Modal} alt="" />
                 </div>
                 <div>
-                    <h2>Desenvolvedora Front-End</h2>
+                    <h2>Front-End Developer</h2>
                     <br/>
-                    <p>MODAL GR - <span>Estágio</span></p>
-                    <h5>Outubro 2022 - Dezembro 2022</h5>
+                    <p>MODAL GR - <span>Internship</span></p>
+                    <h5>October 2022 - December 2022</h5>
                     <br/>
-                    <p>Estagiária de Front-End na Modal GR <br/>
+                    <p>Front-End Internship at Modal GR <br/>
                     <br/>
                        - Estagiaria do  processo de formação<br/>
                        - Desenvolvimento de Aplicações React  <br/>
@@ -36,17 +35,19 @@ export default function ProfissionalExperience(){
                 </div>
             </Exp>
             <Exp>
+                <div className="responsive">
                 <Progress />
+                </div>
                 <div>
                     <Logo src={Modal} alt="" />
                 </div>
                 <div>
-                    <h2>Desenvolvedora Full-Stack</h2>
+                    <h2>Full-Stack Developer</h2>
                     <br/>
-                    <p>MODAL GR - <span>Estágio</span></p>
-                    <h5>Outubro 2022 - Dezembro 2022</h5>
+                    <p>MODAL GR - <span>Internship</span></p>
+                    <h5>January 2023 - Currently</h5>
                     <br/>
-                    <p>Estagiária de Full-Stack na Modal GR<br/>
+                    <p>Full-Stack Internship at Modal GR<br/>
                     <br/>
                         - Desenvolvimento de Aplicações Angular <br/>
                         - Desenvolvimento de Single Page Applications <br/>

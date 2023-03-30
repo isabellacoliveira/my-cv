@@ -8,15 +8,16 @@ import { Container, Exp, Experiencia, Logo } from "./styles";
 export default function Training(){
     return (
         <>       
-            <Barra Text="Graduating"/>
-            <Container>
+        <Barra Text="Graduating"/>
+        <Container>
         <Experiencia>
             <Exp>
                 <div>
                     <Logo src={Fatec} alt="" />
                 </div>
-                <div>
-                    <h2>Análise e Desenvolvimento de Sistemas</h2>
+                <div className="fatec">
+                    <h2>Systems Development <br/>
+                    Analyst</h2>
                     <br/>
                     <p>Fatec - <span>Praia Grande</span></p>
                     <h5>Fevereiro 2022 - Dezembro 2024</h5>
@@ -42,13 +43,14 @@ export default function Training(){
                 <div>
                     <Logo src={Dio} alt="" />
                 </div>
-                <div>
+                <div className="dio">
                     <h2>Desenvolvimento Back-End</h2>
                     <br/>
                     <p>Digital Innovation One </p>
                     <br/>
-                    <p>Bootcamp: Banco PAN Java Developer<br/>
-                        Grade: <br/>
+                    <p>
+                        Bootcamp: Banco PAN Java Developer<br/>
+                        {/* Grade: <br/>
                         - Dominando IDEs JAVA <br/>
                         - Aprendendo a sintaxe JAVA <br/>
                         - Logica condicional e controles de fluxo JAVA <br/>
@@ -71,7 +73,7 @@ export default function Training(){
                         - Adicionando segurança a uma API Rest com Spring Security  <br/>
                         - Conhecendo Spring Data JPA na prática com JAVA   <br/>
                         - Criando uma API Rest conectada ao AMAZON RDS com JAVA  <br/>
-                        - Explorando padrões de projeto na prática com JAVA   <br/>
+                        - Explorando padrões de projeto na prática com JAVA   <br/> */}
                     </p>
                 </div>
             </Exp>
@@ -79,7 +81,7 @@ export default function Training(){
                 <div>
                     <Logo src={Alura} alt="" />
                 </div>
-                <div>
+                <div >
                     <h2>Desenvolvimento Full-Stack</h2>
                     <br/>
                     <p>Alura </p>

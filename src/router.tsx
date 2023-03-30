@@ -19,7 +19,7 @@ function AppRoutes() {
         <Router>
             <Routes>
                 <Route path="/" element={<Cabecalho />} >
-                    <Route path="/home" element={<PaginaPrincipal />} />
+                    <Route path="/" element={<PaginaPrincipal />} />
                     <Route path="/skills" element={<Skills />} />
                     <Route path="/training" element={<Training />} />
                     {/* <Route path="/certifications" element={<Certifications />} /> */}

@@ -1,7 +1,6 @@
 import { Route,  BrowserRouter as Router, Routes } from "react-router-dom";
 import Cabecalho from "./components/Header";
 import { LinguagensProvider } from "./contexts/linguagensProvider";
-import Certifications from "./pages/certification";
 import LinguagemSelecionada from "./pages/LinguagemSelecionada";
 import Skills from "./pages/Skills";
 import NaoEncontrada from "./pages/NaoEncontrada";
@@ -9,13 +8,14 @@ import PaginaPrincipal from "./pages/paginaPrincipal";
 import Projeto from "./pages/Projeto";
 import ProfissionalExperience from "./pages/Profissional-Experience";
 import Training from "./pages/Training";
-import Floor from "./components/Rodape";
 import Construcao from "./pages/Construcao";
+import { ProjetosProvider } from "./contexts/projetosProvider";
 
 function AppRoutes() {
 	return (
         <>    
         <LinguagensProvider>    
+        <ProjetosProvider>
         <Router>
             <Routes>
                 <Route path="/" element={<Cabecalho />} >
@@ -33,6 +33,7 @@ function AppRoutes() {
                 </Route>
             </Routes>
         </Router>
+        </ProjetosProvider>
         </LinguagensProvider>
         </>
 	);

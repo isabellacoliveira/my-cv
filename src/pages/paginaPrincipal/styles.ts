@@ -28,18 +28,6 @@ export const LinguagensDiv = styled.div`
     flex-direction: column;
     `; 
 
-export const ProjetosLinguagemDiv = styled.div`
-    display: flex;
-    justify-content: center;
-    margin: 0 auto;
-    width: 100%;
-    margin: 0 auto;
-    align-items: center;
-
-    div{
-        width: 100%;
-    }
-    `; 
 
 export const TituloDiv = styled.div`
     display: flex;
@@ -103,30 +91,64 @@ export const DivImgP = styled.div`
      
     }
 `
+export const ProjetosLinguagemDiv = styled.div`
+    display: flex;
+    justify-content: center;
+    margin: 0 auto;
+    width: 100%;
+    margin: 0 auto;
+    align-items: center;
+    margin-bottom: 50px;
+
+    div{
+        width: 100%;
+    }
+    `; 
+
 
 export const LingDiv = styled.div`
-    flex-direction: column;
-    display: flex;
-    width: 25%;
-`
+padding-left: 20px;
+padding-right: 20px;
+display: grid;
+
+
+@media (max-width: 900px) {
+    grid-template-columns: repeat(2, 1fr); 
+    gap: 5px; /* Adiciona espaçamento entre os elementos */
+}
+
+
+@media (min-width: 900px) {
+    grid-template-columns: repeat(3, 1fr); /* Define 4 colunas com largura igual */
+    gap: 30px; /* Adiciona espaçamento entre os elementos */
+    }
+`;
+
+
 
 export const AboutMe = styled.div`
     display: flex;
     justify-content: center;
-    margin-top: 50px;
 
     img{
         border-radius: 50%;
         width: 200px;
         height: 200px;
         margin-bottom: 20px;
+        margin-top: 50px;
     }
 
     @media (max-width: 900px) {
         width: 100%;
         flex-direction: column;
         align-items: center;
-
+        p, h2, h3{
+            padding-top: 10px;
+        }
+        h3{
+            margin-bottom: 20px;
+        }
+        
         .infos{
             text-align: center;
             padding-bottom: 30px;
@@ -135,10 +157,17 @@ export const AboutMe = styled.div`
     
     @media (min-width: 900px) {
         flex-direction: row;
-
-    .infos{
+        p, h2, h3{
+            padding-top: 10px;
+        }
+        h3{
+            margin-bottom: 20px;
+        }
+        
+        .infos{
         margin-right: 20px;
         margin-top: 50px;
+        font-size: 15px;
     }
     }
 `

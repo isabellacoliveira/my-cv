@@ -28,8 +28,6 @@ export function LinguagensProvider({ children }: LinguagensProviderProps) {
 			Api.get<ILinguagens[]>("/linguagens")
 				.then((resposta) => {
 					setLinguagens(resposta.data);
-					console.log(`hello world`) 
-					console.log(resposta.data)
 				})
 				.catch((error) => {
 					console.log(error);

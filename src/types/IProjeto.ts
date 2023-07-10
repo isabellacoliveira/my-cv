@@ -3,5 +3,6 @@ export default interface IProjeto {
     descricao: string, 
     imagem: string, 
     urlGithub: string
-    urlVisita: string
+    urlVisita: string,
+    linguagemUtilizada: string
 }

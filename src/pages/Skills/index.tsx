@@ -21,8 +21,9 @@ export default function Skills(){
     return (
         <>        
             <Content>
-                <Barra Text="My Skills"/>
-               <p>Here you can see my Language Skills ! Im still studying to expand my career and knowledge.</p>
+                <Barra Text="Minhas Habilidades"/>
+               {/* <p>Here you can see my Language Skills ! Im still studying to expand my career and knowledge.</p> */}
+               <p>Aqui estão algumas linguagens no qual possuo conhecimento. Estou estudando para expandir minha carreira e conhecimentos.</p>
                <Skill>
                     <h5>Front-End</h5>
                     <Language src={Html} alt="" />
@@ -31,25 +32,25 @@ export default function Skills(){
                     <Language src={Ts} alt="" />
                     <Language src={React} alt="" />
                     <Language src={Angular} alt="" />
-                    <Language src={Vue} alt="" />
+                    {/* <Language src={Vue} alt="" /> */}
 
                     <h5>Back-End</h5>
                     <Language src={CSharp} alt="" />
                     <Language src={Net} alt="" />
                     <Language src={Sql} alt="" />
+                    <Language src={Spring} alt="" />
+                    <Language src={Java} alt="" />
 
                     <h5>Mobile</h5>
                     <Language src={React} alt="" />
 
                </Skill>
-               <Barra Text="Studying"/>
+               {/* <Barra Text="Studying"/>
                <Skill>
                <p>And im studying...</p>
-                <Language src={Java} alt="" />
-                <Language src={Spring} alt="" />
                 <Language src={Cplus} alt="" />
                 <Language src={Node} alt="" />
-               </Skill>
+               </Skill> */}
 
             </Content>
             <Floor />

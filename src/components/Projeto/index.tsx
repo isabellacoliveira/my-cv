@@ -1,5 +1,5 @@
 import IProjeto from "../../types/IProjeto";
-import { BotaoVisita, ContainerProjeto, NomeProjeto, ProjetoDescricao } from "./styles";
+import { BotaoVisita, ContainerProjeto, LinguagemUtilizada, NomeProjeto, ProjetoDescricao } from "./styles";
 
 interface ProjetosProps {
     projeto: IProjeto;
@@ -7,10 +7,11 @@ interface ProjetosProps {
 
 const Projetos = ({ projeto }: ProjetosProps) => {
     const handleVisitaButtonClick = (gitHub: boolean) => {
-        if(gitHub){
-            window.open(projeto.urlGithub, "_blank");
-        } 
-        window.open(projeto.urlVisita, "_blank");
+        if(!gitHub){
+            window.location.href = projeto.urlVisita;
+        } else{
+            window.location.href = projeto.urlGithub;
+        }
     };
     
   return (
@@ -19,8 +20,8 @@ const Projetos = ({ projeto }: ProjetosProps) => {
            <img src={projeto.imagem} alt="Imagem do Projeto" />
            <NomeProjeto>{projeto.nomeProjeto}</NomeProjeto>
            <ProjetoDescricao>{projeto.descricao}</ProjetoDescricao>
-           {projeto.urlVisita ? <BotaoVisita onClick={() => handleVisitaButtonClick(true)}>Visita</BotaoVisita> : null}
-           <BotaoVisita onClick={() => handleVisitaButtonClick(false)}>Código Fonte</BotaoVisita>
+           {projeto.urlVisita ? <BotaoVisita onClick={() => handleVisitaButtonClick(false)}>Visita</BotaoVisita> : null}
+           <BotaoVisita onClick={() => handleVisitaButtonClick(true)}>Código Fonte</BotaoVisita>
     </ContainerProjeto>
     </>
   )

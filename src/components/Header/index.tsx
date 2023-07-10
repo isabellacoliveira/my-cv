@@ -1,10 +1,7 @@
-import { useState } from "react";
 import { Link, Outlet } from "react-router-dom";
 import { Header, HeaderRoutes } from "./styles";
 
 export default function Cabecalho(){
-    const [sidebar, setSidebar] = useState(false)
-    const showSiderbar = () => setSidebar(!sidebar)
 
     return (
         <>        

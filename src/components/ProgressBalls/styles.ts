@@ -3,6 +3,7 @@ import styled from "styled-components";
 export const Bolinhas = styled.img` 
     height: 10px;
     width: 10px;
+    margin-top: 70px;
 `
 
 export const Barrinha = styled.img` 
@@ -16,5 +17,4 @@ export const Barrinha = styled.img`
 export const Container = styled.div` 
     display: flex;
     flex-direction: column;
-    /* padding-top: 80px; */
 `

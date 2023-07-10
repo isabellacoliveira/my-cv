@@ -10,10 +10,12 @@ import ProfissionalExperience from "./pages/Profissional-Experience";
 import Training from "./pages/Training";
 import Construcao from "./pages/Construcao";
 import { ProjetosProvider } from "./contexts/projetosProvider";
+import { FormacaoAcademicaProvider } from "./contexts/formacaoAcademicaProvider";
 
 function AppRoutes() {
 	return (
         <>    
+        <FormacaoAcademicaProvider>
         <LinguagensProvider>    
         <ProjetosProvider>
         <Router>
@@ -35,6 +37,7 @@ function AppRoutes() {
         </Router>
         </ProjetosProvider>
         </LinguagensProvider>
+        </FormacaoAcademicaProvider>
         </>
 	);
 }

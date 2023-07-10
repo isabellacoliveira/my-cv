@@ -4,10 +4,12 @@ export const ContainerProjeto = styled.div`
     background-color: #6495ED33;
     border-radius: 8px;
     padding: 30px 30px 30px 30px;
-    align-items: center;
     display: flex;
     flex-direction: column;
-
+    align-items: center;
+    padding-left: 20px;
+    padding-right: 20px;
+    
     &:hover{
         transform: translateY(-4px);
     }
@@ -24,18 +26,20 @@ export const ContainerProjeto = styled.div`
     }
     @media (max-width: 900px) {
         img{
-            width: 140px;
-            height: 110px;
+            width: 100%;
+            height: 100px;
         }
         width:170px!important;
+        height: 300px;
         margin-top: 10px;
         margin-bottom: 10px;
     }
 `
 export const NomeProjeto = styled.p` 
     font-weight: bold;
-    padding-top: 4px;
-    padding-bottom: 4px;
+    padding-top: 15px;
+    padding-bottom: 10px;
+    text-align: left!important;
     
     @media (min-width: 900px) {
         font-size: 25px;
@@ -64,7 +68,7 @@ export const ProjetoDescricao = styled.div`
   }
 
     @media (max-width: 900px) {
-      font-size: 15px;
+      font-size: 10px;
     }
 `;
 
@@ -93,7 +97,10 @@ export const BotaoVisita = styled.button`
        margin-bottom: 6px;
     }
 `
-
+export const LinguagemUtilizada = styled.img`
+    width: 10px;
+    height: 10px;
+    `
 
 
 

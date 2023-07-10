@@ -40,6 +40,7 @@ export const RedesSociais  = styled.div`
     
     @media (min-width: 900px) {
         flex-direction: column;
+        margin-top: 60px;
     }
 `
 
@@ -88,6 +89,8 @@ export const InsertContact = styled.input`
     outline: none;
     color: #fff;
     height: 60px;
+    border: none;
+    border-radius: 8px;
 
     ::placeholder { 
         color: #fff;
@@ -98,6 +101,7 @@ export const InsertContact = styled.input`
     }
     
     @media (min-width: 900px) {
+        width: 600px;
     }
 `
 
@@ -105,6 +109,18 @@ export const Send = styled.button`
     background-color: #2b2728;
     color: #fff;
     height: 60px;
+    border-radius: 8px;
+    border: none;
+
+    &.desabilitado {
+        background-color: #C0C0C0;
+        color:  #2b2728;
+
+        &:active{
+            background-color: #C0C0C0;
+            color:  #2b2728;
+        }
+    }
 
     &:active{
         background-color: #fff;

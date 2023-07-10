@@ -14,7 +14,7 @@ export const Paragrafo = styled.a`
     cursor: pointer;
     
     @media (max-width: 900px) {
-        font-size: 25px;
+        font-size: 18px;
     }
     
     @media (min-width: 900px) {
@@ -77,11 +77,12 @@ export const DivImgP = styled.div`
     margin:0;
     padding:0;
     padding-left: 20px;
+
     
     @media (max-width: 900px) {
-        min-height: 200px;
-        padding-top: 160px;
-
+        height: 200px;
+        padding-top: 140px;
+        padding-bottom: 3px;
     }
     
     @media (min-width: 900px) {
@@ -107,10 +108,22 @@ export const ProjetosLinguagemDiv = styled.div`
 
 
 export const LingDiv = styled.div`
-padding-left: 20px;
-padding-right: 20px;
-display: grid;
+    display: grid;
+    height: 500px;
+    overflow: auto;
 
+    ::-webkit-scrollbar {
+    width: 8px; /* Largura da barra de rolagem */
+  }
+
+  ::-webkit-scrollbar-thumb {
+    background-color: #888; /* Cor do indicador da barra de rolagem */
+    border-radius: 4px; /* Raio de borda do indicador */
+  }
+
+  ::-webkit-scrollbar-thumb:hover {
+    background-color: #555; /* Cor do indicador da barra de rolagem ao passar o mouse */
+  }
 
 @media (max-width: 900px) {
     grid-template-columns: repeat(2, 1fr); 
@@ -119,6 +132,8 @@ display: grid;
 
 
 @media (min-width: 900px) {
+    padding-right: 50px;
+    padding-left: 50px;
     grid-template-columns: repeat(3, 1fr); /* Define 4 colunas com largura igual */
     gap: 30px; /* Adiciona espaçamento entre os elementos */
     }
@@ -129,19 +144,23 @@ display: grid;
 export const AboutMe = styled.div`
     display: flex;
     justify-content: center;
+    padding-bottom: 30px;
 
     img{
         border-radius: 50%;
         width: 200px;
         height: 200px;
-        margin-bottom: 20px;
-        margin-top: 50px;
     }
 
     @media (max-width: 900px) {
         width: 100%;
         flex-direction: column;
         align-items: center;
+        font-size: 18px;
+        padding-left: 20px;
+        padding-right: 20px;
+        padding-top: 20px;
+        
         p, h2, h3{
             padding-top: 10px;
         }
@@ -150,9 +169,10 @@ export const AboutMe = styled.div`
         }
         
         .infos{
-            text-align: center;
+            text-align: left;
             padding-bottom: 30px;
         }
+           
     }
     
     @media (min-width: 900px) {
@@ -165,9 +185,13 @@ export const AboutMe = styled.div`
         }
         
         .infos{
-        margin-right: 20px;
-        margin-top: 50px;
-        font-size: 15px;
+            margin-right: 20px;
+            margin-top: 50px;
+            font-size: 15px;
+    }
+    img{
+        margin-bottom: 20px;
+        margin-top: 60px;
     }
     }
 `
@@ -192,4 +216,15 @@ export const Title = styled.div`
     border-radius: 40px;
     color: #fff;
     font-weight: bold;
+ `
+
+ export const MeusServicos = styled.section`
+    background-color: red;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    justify-content: center;
+    display: flex;
+    strong{
+        font-weight: bold;
+    }
  `

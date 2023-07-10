@@ -2,15 +2,15 @@ import { Container, Contato, ContatoDiv, InsertContact, RedesSociais, Send } fro
 import Linkedin from '../../assets/linkedin.webp';
 import Github from '../../assets/github.png';
 import Instagram from '../../assets/insta.png';
-import { Link, useNavigate } from "react-router-dom";
+import { Link } from "react-router-dom";
 import { useState } from "react";
 import swal from 'sweetalert';
 import Emailjs from '@emailjs/browser'; 
 
 export default function FaleComigo() {
-  const navigate = useNavigate(); 
   const[nomeUsuario, setNomeUsuario] = useState('');
   const[mensagem, setMensagem] = useState(''); 
+  const [camposPreenchidos, setCamposPreenchidos] = useState(false);
 
   function sendEmail(e:React.FormEvent<HTMLFormElement>){
     e.preventDefault();
@@ -30,7 +30,10 @@ export default function FaleComigo() {
         console.log("Email não enviado.", err)
     })
   }
-
+  function verificarCamposPreenchidos() {
+    setCamposPreenchidos(nomeUsuario !== '' && mensagem !== '');
+  }
+  
     return (
       <Container>
         <RedesSociais>
@@ -61,14 +64,21 @@ export default function FaleComigo() {
                   type="text" 
                   placeholder="Name"
                   value={nomeUsuario}
-                  onChange={evento => setNomeUsuario(evento.target.value)}/>
+                  onChange={evento => {
+                    setNomeUsuario(evento.target.value);
+                    verificarCamposPreenchidos();
+                  }}/>
               <InsertContact 
                   type="text" 
                   placeholder="Type your message"
                   value={mensagem}
-                  onChange={evento => setMensagem(evento.target.value)}/>
-                {/* TODO desabilitar o botao qnd nada estiver escrito */}
-              <Send type="submit" >Send message</Send>
+                  onChange={evento => {
+                    setMensagem(evento.target.value);
+                    verificarCamposPreenchidos();
+                  }}
+                  />
+                <Send type="submit" disabled={!camposPreenchidos}
+                className={!camposPreenchidos ? 'desabilitado' : ''}>Enviar message</Send>
             </Contato>
         </ContatoDiv>
       </Container>

@@ -1,10 +1,5 @@
 import styled from "styled-components";
 
-export const Logo = styled.img`
-    width: 200px;
-    padding-right: 20px;
-`
-
 export const Experiencia = styled.div`
     display: flex;
     margin-left: 20px;
@@ -49,6 +44,7 @@ export const Exp = styled.div`
         }
     }
     @media (min-width: 900px) {
+        flex-direction: column;
         p{
             font-size: 10px;
             font-weight: bold;

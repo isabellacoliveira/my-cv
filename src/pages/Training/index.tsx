@@ -14,7 +14,7 @@ export default function Training(){
     
     return (
         <>       
-        <Barra Text="Graduating"/>
+        <Barra Text="Cursando"/>
         <Container>
         <Experiencia>
             <Exp>

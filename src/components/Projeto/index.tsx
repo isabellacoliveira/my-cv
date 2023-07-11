@@ -1,5 +1,5 @@
 import IProjeto from "../../types/IProjeto";
-import { BotaoVisita, ContainerProjeto, LinguagemUtilizada, NomeProjeto, ProjetoDescricao } from "./styles";
+import { BotaoVisita, ContainerProjeto, NomeProjeto, ProjetoDescricao } from "./styles";
 
 interface ProjetosProps {
     projeto: IProjeto;

@@ -262,6 +262,10 @@ export const Title = styled.div`
                 font-weight: bold;
             }
         }
+
+        button:hover {
+        transform: translateY(-4px);
+    }
     }
    
     `
@@ -286,4 +290,6 @@ export const ImagensGif = styled.div`
     height: 40px;
     border-radius: 8px;
     cursor: pointer;
+
+
 `

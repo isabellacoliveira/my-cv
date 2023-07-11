@@ -14,7 +14,7 @@ export default function FaleComigo() {
 
   function sendEmail(e:React.FormEvent<HTMLFormElement>){
     e.preventDefault();
-    swal("success", "Your message was send!", "success")
+    swal("Sucesso!", "Sua mensagem foi enviada!", "Sucesso")
     setNomeUsuario(""); 
     setMensagem("");
 
@@ -38,31 +38,27 @@ export default function FaleComigo() {
       <Container>
         <RedesSociais>
           <Link
+          className="rede"
            target="_blank"
             to={"https://www.linkedin.com/in/isabella-cruz-de-oliveira-b761b7233/"}
           >
             <img src={Linkedin} alt="Linkedin"/>
           </Link>
           <Link
+          className="rede"
            target="_blank"
             to={"https://github.com/isabellacoliveira"}
           >
           <img src={Github} alt="Github" />
           </Link>
-          <Link
-           target="_blank"
-            to={"https://www.instagram.com/isaxx_ah/"}
-          >
-            <img src={Instagram} alt="Instagram" />
-          </Link>
         </RedesSociais>
 
         <ContatoDiv>
-            <p>Send me a message! :) </p>
+            <p>Me envie uma mensagem! :) </p>
             <Contato onSubmit={sendEmail}>
               <InsertContact 
                   type="text" 
-                  placeholder="Name"
+                  placeholder="Digite seu nome"
                   value={nomeUsuario}
                   onChange={evento => {
                     setNomeUsuario(evento.target.value);
@@ -70,7 +66,7 @@ export default function FaleComigo() {
                   }}/>
               <InsertContact 
                   type="text" 
-                  placeholder="Type your message"
+                  placeholder="Escreva sua mensagem"
                   value={mensagem}
                   onChange={evento => {
                     setMensagem(evento.target.value);
@@ -78,7 +74,7 @@ export default function FaleComigo() {
                   }}
                   />
                 <Send type="submit" disabled={!camposPreenchidos}
-                className={!camposPreenchidos ? 'desabilitado' : ''}>Enviar message</Send>
+                className={!camposPreenchidos ? 'desabilitado' : ''}>Enviar mensagem</Send>
             </Contato>
         </ContatoDiv>
       </Container>

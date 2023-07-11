@@ -29,6 +29,10 @@ export const Container = styled.div`
 export const RedesSociais  = styled.div`
     margin-right: 90px;
     display: flex;
+  
+    .rede:hover {
+        transform: translateY(-4px);
+    }
     
     @media (max-width: 900px) {
         flex-direction: row;

@@ -2,7 +2,6 @@ import Floor from "../../components/Rodape";
 import Modal from "../../assets/modal.jpg";
 import Shopee from "../../assets/shopee.png";
 import { Container, Exp, Experiencia, Logo } from "./styles";
-// import Progress from "../../components/ProgressBalls";
 import Barra from "../../components/Barra";
 
 export default function ProfissionalExperience(){
@@ -13,7 +12,6 @@ export default function ProfissionalExperience(){
         <Experiencia>
             <Exp>
                     <div className="responsive">
-                    {/* <Progress /> */}
                     </div>
                     <div>
                         <Logo src={Shopee} alt="" />
@@ -34,7 +32,6 @@ export default function ProfissionalExperience(){
                 </Exp>
             <Exp>
                 <div className="responsive">
-                {/* <Progress /> */}
                 </div>
                 <div>
                     <Logo src={Modal} alt="" />
@@ -58,7 +55,6 @@ export default function ProfissionalExperience(){
             </Exp>
             <Exp>
                 <div className="responsive">
-                {/* <Progress /> */}
                 </div>
                 <div>
                     <Logo src={Modal} alt="" />

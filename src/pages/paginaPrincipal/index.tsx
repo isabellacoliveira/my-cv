@@ -11,7 +11,7 @@ import Servicos from "../../assets/reactt.gif"
 import Servicos1 from "../../assets/csharpp.gif"
 
 export default function PaginaPrincipal(){
-    const {linguagens, getLinguagens } = useLinguagens(); 
+    const {getLinguagens } = useLinguagens(); 
     const {projetos, getProjetos } = useProjetos(); 
 
     useEffect(() => {
@@ -23,7 +23,6 @@ export default function PaginaPrincipal(){
         <div>
             <DivImgP>
                 <Paragrafo>Meu portifólio: Desenvolvedora Full-Stack</Paragrafo>
-                {/* <Paragrafo>Meu portifólio: Full-Stack Developer</Paragrafo> */}
             </DivImgP>
                 <Barra Text="Meu Perfil">Meu perfil</Barra>
             <AboutMe>
@@ -100,8 +99,6 @@ export default function PaginaPrincipal(){
                     <Barra Text="Meus Projetos"></Barra>
                 <TituloDiv>
                     <p>Aqui você pode visualizar alguns dos meus projetos! </p>
-                    {/* <p>Hi! Welcome to my portfolio! Here you can find my projects and developments. <br/>
-                    Hope you can learn something</p> */}
                     {/* <BotaoTemporario>
                         <a href="https://github.com/isabellacoliveira?tab=repositories" target={"_blank"}>My Projects</a>
                     </BotaoTemporario> */}

@@ -6,8 +6,8 @@ import Barra from "../../components/Barra";
 export default function Certifications(){
     return (
         <>        
-            <Barra Text="My Certifications"/>
-            <p>Hi, here you can see my certifications </p>
+            <Barra Text="Meus Certificados"/>
+            <p>Aqui vocês podem ver algumas de minhas certificações. </p>
             <CertificadosContainer>
                 <a href="https://cursos.alura.com.br/certificate/22e45c97-c934-4462-ac10-8ee1dfd4afe5" target={"_blank"}>
                     <Certificados src={Certificado} alt="" />

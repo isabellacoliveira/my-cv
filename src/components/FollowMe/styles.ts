@@ -46,4 +46,21 @@ export const MeSiga = styled.div<MeSigaProps>`
     justify-content: center;
     display: flex;
   }
+
+  .botao__dowload{
+    border: none;
+    margin-top: 10px;
+    background-color: #3A3335;
+    color: #fff;
+    padding: 3px 3px 3px 3px;
+    border-radius: 8px;
+    cursor: pointer;
+  }
+  button:hover{
+    background-color: #fff;
+    color: #3A3335;
+  }
+  @media (max-width: 900px) {
+       margin-top: 250px;
+  }
 `;

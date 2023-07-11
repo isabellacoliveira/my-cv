@@ -23,7 +23,8 @@ export default function Skills(){
             <Content>
                 <Barra Text="Minhas Habilidades"/>
                {/* <p>Here you can see my Language Skills ! Im still studying to expand my career and knowledge.</p> */}
-               <p>Aqui estão algumas linguagens no qual possuo conhecimento. Estou estudando para expandir minha carreira e conhecimentos.</p>
+               <p>Aqui estão algumas linguagens no qual possuo conhecimento. 
+                 Estou estudando para expandir minha carreira e conhecimentos.</p>
                <Skill>
                     <h5>Front-End</h5>
                     <Language src={Html} alt="" />

@@ -32,7 +32,6 @@ p{
 }
 
 .conteudoUm{
-    background-color: red;
     color: #fff;
     
     section{
@@ -48,6 +47,9 @@ p{
     button:hover {
     transform: translateY(-4px);
 }
+    @media (max-width: 900px) {
+       width: 300px;
+    }
 }
 
 `
@@ -67,9 +69,25 @@ export const ImagensGif = styled.div`
     justify-content: center;
     display: flex;
     padding-bottom: 10px;
+
+    @media (max-width: 900px) {
+       display: flex;
+       flex-direction: column;
+    }
+    @media (min-width: 900px) {
+        display: flex;
+        justify-content: center;
+    }
  `
  export const Codigo = styled.img`
-    width: 500px;
-    height: 400px;
     padding-left: 20px;
+    
+    @media (max-width: 900px) {
+        width: 350px;
+        padding-top: 10px;
+    }
+    @media (min-width: 900px) {     
+        width: 500px;
+        height: 400px;
+    }
  `

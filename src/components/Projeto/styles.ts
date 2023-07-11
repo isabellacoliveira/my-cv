@@ -20,7 +20,7 @@ export const ContainerProjeto = styled.div`
     
     @media (min-width: 900px) {
         img{
-            width: 390px;
+            width: 360px;
             height: 200px;
         }
     }

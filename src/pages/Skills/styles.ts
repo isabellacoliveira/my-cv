@@ -35,4 +35,12 @@ export const Content = styled.div`
         margin-top: 20px;
         text-align: center;
     }
+    @media (max-width: 900px) {
+        p{
+            font-size: 16px;
+            text-align: left;
+            padding-left: 10px;
+        }
+    }
+    
 `

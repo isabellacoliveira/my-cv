@@ -30,6 +30,7 @@ export const Exp = styled.div`
     @media (max-width: 900px) {
         flex-direction: column;
         align-items: center;
+        padding-bottom: 20px;
         img{
             width: 200px;
         }
@@ -41,6 +42,7 @@ export const Exp = styled.div`
 
         h2{
             padding-top: 20px;
+            font-size: 16px;
         }
     }
     @media (min-width: 900px) {

@@ -110,7 +110,8 @@ export const ProjetosLinguagemDiv = styled.div`
 export const LingDiv = styled.div`
     display: grid;
     height: 500px;
-    overflow: auto;
+    overflow-x: hidden;
+    overflow-y: auto;
 
     ::-webkit-scrollbar {
     width: 8px; /* Largura da barra de rolagem */

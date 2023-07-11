@@ -27,7 +27,6 @@ export default function PaginaPrincipal(){
                 <SobreMim />
                 <MeuServico />
                
-    
             <LinguagensDiv>
                     <Barra Text="Meus Projetos"></Barra>
                 <TituloDiv>

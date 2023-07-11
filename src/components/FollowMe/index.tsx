@@ -3,6 +3,12 @@ import Linkedin from '../../assets/linkedin.webp';
 import Github from '../../assets/github.png';
 import { useState } from "react";
 import Seta from '../../assets/seta.webp'
+import PDFFile from '../../assets/isabella-curriculo.pdf';
+import { saveAs } from "file-saver";
+
+const downloadFile = () => {
+  saveAs(PDFFile, "isabella-cruz-de-oliveira-curriculo.pdf");
+};
 
 const FollowMe = () => {
     const [isHovered, setIsHovered] = useState(false);
@@ -34,11 +40,16 @@ const FollowMe = () => {
             {isHovered ? "Me siga nas redes sociais!" : ""}
             
             <br />  
-            {isHovered ? <div>
+            {isHovered ? 
+            <>  
+                <div>
+                <img src={Linkedin} onClick={() => handleVisitaButtonClick(false)} alt="Meu Linkedin" />
+                <img src={Github} onClick={() => handleVisitaButtonClick(true)} alt="Meu Github" />
+                </div> 
+                <button className="botao__dowload" onClick={downloadFile}>Meu Curriculo (Download) </button>
+            </>
 
-            <img src={Linkedin} onClick={() => handleVisitaButtonClick(false)} alt="Meu Linkedin" />
-            <img src={Github} onClick={() => handleVisitaButtonClick(true)} alt="Meu Github" />
-            </div> : null}
+            : null}
            
         </MeSiga>
         

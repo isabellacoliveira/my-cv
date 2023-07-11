@@ -32,6 +32,10 @@ export const Exp = styled.div`
 
         h2{
             padding-top: 20px;
+            font-size: 20px;
+        }
+        p{
+            font-size: 12px;
         }
     }
     

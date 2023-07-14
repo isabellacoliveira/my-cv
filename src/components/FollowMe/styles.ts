@@ -12,19 +12,19 @@ export const MeSiga = styled.div<MeSigaProps>`
   z-index: 9999;
   background-color: #ffffff;
   padding: 10px;
-  border-radius: 5px;
+  border-radius: 50%;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
   display: flex;
   flex-direction: column;
-
+  text-align: centerF;
   /* Atualização do estilo para incluir a lógica condicional no width */
   width: 50px;
   transition: width 0.3s ease;
   ${({ isHovered }): FlattenSimpleInterpolation | CSSObject =>
     isHovered
-      ? css`
+    ? css`
           width: 150px;
-        `
+          `
       : css`
           width: 80px;
           height: 80px;

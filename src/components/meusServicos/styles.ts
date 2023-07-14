@@ -50,6 +50,9 @@ p{
     @media (max-width: 900px) {
        width: 300px;
     }
+    /* @media (max-width: 820px) {
+       width: 570px;
+    } */
 }
 
 `
@@ -67,6 +70,7 @@ cursor: pointer;
 `
 export const ImagensGif = styled.div`
     justify-content: center;
+    align-items: center;
     display: flex;
     padding-bottom: 10px;
 
@@ -78,6 +82,10 @@ export const ImagensGif = styled.div`
         display: flex;
         justify-content: center;
     }
+    /* @media (max-width: 820px) {
+        display: flex;
+        flex-direction: row;
+    } */
  `
  export const Codigo = styled.img`
     padding-left: 20px;

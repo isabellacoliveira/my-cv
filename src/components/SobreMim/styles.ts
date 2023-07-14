@@ -31,7 +31,23 @@ export const AboutMe = styled.div`
             text-align: left;
             padding-bottom: 30px;
         }
-           
+        .skills{
+            display: grid;
+            grid-template-columns: repeat(4, 1fr); 
+            gap: 5px; 
+            justify-content: space-between;
+            padding-left: 20px;
+            
+            img:hover {
+                transform: translateY(-4px);
+            }
+            .imagem__logo{
+                margin-top: 6px;
+                width: 50px;
+                height: 50px;
+                border-radius: 0px!important;
+            }
+        }
     }
     
     @media (min-width: 900px) {
@@ -39,18 +55,28 @@ export const AboutMe = styled.div`
         p, h2, h3{
             padding-top: 10px;
         }
-        h3{
-            margin-bottom: 20px;
-        }
         
         .infos{
             margin-right: 20px;
             margin-top: 50px;
             font-size: 15px;
-    }
-    img{
-        margin-bottom: 20px;
-        margin-top: 60px;
-    }
+        }
+        img{
+            margin-bottom: 20px;
+            margin-top: 60px;
+        }
+        .skills{
+            display: flex;
+            justify-content: space-between;
+    
+            .imagem__logo{
+                width: 50px;
+                height: 50px;
+                border-radius: 0px!important;
+            }
+            img:hover {
+                transform: translateY(-4px);
+            }
+        }
     }
 `

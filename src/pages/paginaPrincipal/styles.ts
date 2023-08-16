@@ -1,24 +1,73 @@
-import styled from "styled-components";
+import styled, { keyframes } from "styled-components";
 
 export const Coder = styled.img`
     width: 100%;
     height: 500px;
     position: relative;
 `
+export const StatusDiv = styled.div`
+    display: flex;
+    flex-direction: row;
+`
+export const Status = styled.div`
+   background-color: green;
+   color: green;
+   border-radius: 50%;
+   width: 10px;
+   height: 10px;
+   border: none;
+   margin-right: 10px;
+   margin-top: 9px;
+`
+export const ParagrafoCargo = styled.a`
+    font-size: 15px;
+    font-weight: bold;
+    color: #000;
+    letter-spacing: 2px; 
+`
+export const DivContato = styled.div`
+    display: flex;
+    justify-content: center;
+
+   img{
+    width: 30px;
+    margin-right: 20px;
+    transform: translateY(-4px);
+   }
+`
 
 export const Paragrafo = styled.a`
     color: #fff;
     font-weight: bold;
-    font-family: 'Raleway';
+    font-family: 'Calibri';
     font-style: normal;
-    cursor: pointer;
+    /* cursor: pointer; */
     
     @media (max-width: 900px) {
         font-size: 18px;
     }
     
     @media (min-width: 900px) {
-        font-size: 72px;
+        font-size: 65px;
+    }
+    `
+export const ParagrafoExplicativo = styled.a`
+    color: #fff;
+    font-weight: bold;
+    font-family: 'Calibri';
+    font-style: normal;
+    cursor: pointer;
+
+    p{
+        font-family: 'Calibri';
+    }
+    
+    @media (max-width: 900px) {
+        font-size: 2px;
+    }
+    
+    @media (min-width: 900px) {
+        font-size: 20px;
     }
     `
 
@@ -69,28 +118,76 @@ export const TituloDiv = styled.div`
     }
     `; 
 
+const gradientAnimation = keyframes`
+    0%, 30%, 90%, 70%, 80%, 20% {
+        background: linear-gradient(to bottom, blue, purple);
+    }
+    10%, 40%, 60%, 100%, 50% {
+        background: linear-gradient(to bottom, #001F3F, #3344aa);
+    }
+`;
+
+
 export const DivImgP = styled.div`
-    background-image: url("https://i2.wp.com/i.giphy.com/media/26tn33aiTi1jkl6H6/giphy-downsized.gif?w=770&ssl=1");
-    background-repeat: no-repeat;
+    /* background-image: url("https://i2.wp.com/i.giphy.com/media/26tn33aiTi1jkl6H6/giphy-downsized.gif?w=770&ssl=1");
+    background-repeat: no-repeat; */
     width: 100%;
     background-size: 100%;
     margin:0;
     padding:0;
     padding-left: 20px;
+    flex-direction: row;
+    /* background: linear-gradient(to bottom, blue, purple); */
+    display: flex;
+    animation: ${gradientAnimation} 7s infinite;
 
+    .infos{
+        display: flex;
+        flex-direction: row;
+    }
+
+    .coluna{
+        display: flex;
+        flex-direction: column;
+    }
+
+    .content{
+        margin-top: 100px;
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+    }
     
     @media (max-width: 900px) {
         height: 200px;
-        padding-top: 140px;
+        /* padding-top: 140px; */
         padding-bottom: 3px;
     }
     
     @media (min-width: 900px) {
-        padding-top: 400px;
+        padding-top: 10px;
         min-height: 400px;
-        padding-bottom: 20px;
+        /* padding-bottom: 100px; */
      
     }
+
+       .skills{
+            display: flex;
+            justify-content: space-between;
+    
+            .imagem__logo{
+                width: 50px;
+                height: 50px;
+                border-radius: 0px!important;
+            }
+            img:hover {
+                transform: translateY(-4px);
+            }
+        }
+`
+export const FotoMinhaImg = styled.img`
+    width: 900px;
+    height: 600px;
 `
 export const ProjetosLinguagemDiv = styled.div`
     display: flex;

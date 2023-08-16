@@ -65,18 +65,6 @@ export const AboutMe = styled.div`
             margin-bottom: 20px;
             margin-top: 60px;
         }
-        .skills{
-            display: flex;
-            justify-content: space-between;
-    
-            .imagem__logo{
-                width: 50px;
-                height: 50px;
-                border-radius: 0px!important;
-            }
-            img:hover {
-                transform: translateY(-4px);
-            }
-        }
+     
     }
 `

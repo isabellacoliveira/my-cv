@@ -22,6 +22,10 @@ export const Header = styled.nav`
         padding-left: 10px; 
         padding-right: 10px;
     }
+
+    button{
+        margin-right: 100px;
+    }
 `; 
 
 export const SearchBar = styled.input`

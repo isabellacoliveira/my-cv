@@ -24,6 +24,17 @@ export const ParagrafoCargo = styled.a`
     font-weight: bold;
     color: #000;
     letter-spacing: 2px; 
+
+    @keyframes subirDescer {
+    0%, 100% {
+      transform: translateY(0); /* A posição inicial e final é a mesma */
+    }
+    50% {
+      transform: translateY(-20px); /* Eleva a div 20 pixels no meio da animação */
+    }
+  }
+  
+  animation: subirDescer 2s ease-in-out infinite; /* Aplica a animação */
 `
 export const DivContato = styled.div`
     display: flex;
@@ -36,21 +47,6 @@ export const DivContato = styled.div`
    }
 `
 
-export const Paragrafo = styled.a`
-    color: #fff;
-    font-weight: bold;
-    font-family: 'Calibri';
-    font-style: normal;
-    /* cursor: pointer; */
-    
-    @media (max-width: 900px) {
-        font-size: 18px;
-    }
-    
-    @media (min-width: 900px) {
-        font-size: 65px;
-    }
-    `
 export const ParagrafoExplicativo = styled.a`
     color: #fff;
     font-weight: bold;

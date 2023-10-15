@@ -9,9 +9,8 @@ const Projetos = ({ projeto }: ProjetosProps) => {
     const handleVisitaButtonClick = (gitHub: boolean) => {
         if(!gitHub){
             window.location.href = projeto.urlVisita;
-        } else{
-            window.location.href = projeto.urlGithub;
-        }
+        } 
+        window.location.href = projeto.urlGithub;
     };
     
   return (

@@ -2,7 +2,7 @@ import { useEffect, useState } from "react";
 import FaleComigo from "../../components/FaleComigo";
 import Floor from "../../components/Rodape";
 import { useLinguagens } from "../../contexts/linguagensProvider";
-import {  Absoluta, DivImgP, LingDiv, FotoMinhaImg, LinguagensDiv, Paragrafo, ParagrafoExplicativo, ParagrafoCargo, ProjetosLinguagemDiv, TituloDiv, DivContato, Status, StatusDiv } from "./styles";
+import {  Absoluta, DivImgP, LingDiv, FotoMinhaImg, LinguagensDiv,  ParagrafoExplicativo, ParagrafoCargo, ProjetosLinguagemDiv, TituloDiv, DivContato, Status, StatusDiv } from "./styles";
 import Barra from "../../components/Barra";
 import { useProjetos } from "../../contexts/projetosProvider";
 import Projetos from "../../components/Projeto";
@@ -22,6 +22,8 @@ import Net from "../../assets/net.png"
 import React from "../../assets/re.png"
 import Angular from "../../assets/angular.png"
 import CSharp from "../../assets/csharp.png"
+import TypingAnimation from "../../components/TypingAnimation";
+import { CardProjeto } from "../../components/Card";
 export default function PaginaPrincipal(){
     const {getLinguagens } = useLinguagens(); 
     const {projetos, getProjetos } = useProjetos(); 
@@ -38,7 +40,9 @@ export default function PaginaPrincipal(){
                     <div className="infos">
                         <div className="coluna">
                     <ParagrafoCargo>DESENVOLVEDORA     FULL-STACK</ParagrafoCargo> <br />
-                    <Paragrafo>Hi, I'm Isabella</Paragrafo> <br />
+                    <TypingAnimation text={"Hi, I'm Isabella"} />
+                        <br />
+
                     <ParagrafoExplicativo>
                     Como Desenvolvedora Web Full-Stack, minha expertise abrange a criação  e aprimoramento 
                     de projetos com React, Angular, Typescript, C# e .NET, abarcando desde SPAs envolventes 
@@ -89,7 +93,7 @@ export default function PaginaPrincipal(){
                 <LingDiv>
                 {projetos?.map((item) => (
                     <ProjetosLinguagemDiv>
-                        <Projetos projeto={item}/>
+                        <CardProjeto projeto={item}/>
                     </ProjetosLinguagemDiv>
                     ))}
                 </LingDiv>

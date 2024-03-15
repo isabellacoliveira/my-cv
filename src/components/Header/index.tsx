@@ -1,36 +1,35 @@
-import { Link, Outlet } from "react-router-dom";
-import { Header, HeaderRoutes } from "./styles";
-import Acoes from "../Acoes";
+import { Outlet, useNavigate } from "react-router-dom";
+import { Navbar, Container, Nav, Col, Button } from "react-bootstrap";
+import { useTraducao } from "../../contexts/Traducao/TraducaoProvider";
+import { useTranslation } from 'react-i18next'; 
 
-export default function Cabecalho(){
+export default function Cabecalho() {
+    const { toggleTraducao } = useTraducao();
+    const { t } = useTranslation();
+    const navigate = useNavigate();
 
-    return (
-        <>        
-        <Header>  
-            <button> ISA </button>
-            <HeaderRoutes>
-                <Link className="links" to={"/"}>Sobre mim</Link>
-                <Link className="links" to={"/training"}>Formação Acadêmica</Link> 
-                <Link className="links" to={"/profissional-experience"}>Experiência Profissional</Link>
-                {/* <Link className="links" to={"/certifications"}>Certificações</Link> */}
-                {/* <Link className="links" to={"/skills"}>Habilidades</Link> */}
-            </HeaderRoutes>
-            {/* <div className="skills">
-                    <img className="imagem__logo" src={Html} alt="" />
-                    <img className="imagem__logo" src={Css} alt="" />
-                    <img className="imagem__logo" src={Typescript} alt="" />
-                    <img className="imagem__logo" src={Javascript} alt="" />
-                    <img className="imagem__logo" src={Sql} alt="" />
-                    <img className="imagem__logo" src={Java} alt="" />
-                    <img className="imagem__logo" src={Spring} alt="" />
-                    <img className="imagem__logo" src={Net} alt="" />
-                    <img className="imagem__logo" src={React} alt="" />
-                    <img className="imagem__logo" src={Angular} alt="" />
-                    <img className="imagem__logo" src={CSharp} alt="" />
-                </div> */}
-            <Acoes />
-         </Header>
-         <Outlet />
-        </>
-    )
+    
+    function goToPage(rota: string): void {
+        navigate(rota); 
+    }
+
+  return (
+    <>
+      <Navbar bg="dark" data-bs-theme="dark">
+        <Container>
+          <Navbar.Brand href="#home" onClick={() => goToPage("/")}>I S A H </Navbar.Brand>
+          <Nav className="me-auto">
+            <Nav.Link href="#home" onClick={() => goToPage("/")}>{t('about_me')}</Nav.Link>
+            <Nav.Link href="#home" onClick={() => goToPage("/training")}>{t('academic_formation')}</Nav.Link>
+            <Nav.Link href="#features" onClick={() => goToPage("/profissional-experience")}>{t('professional_experience')}</Nav.Link>
+            <Nav.Link href="#pricing" onClick={() => goToPage("/servicos")}>{t('services')}</Nav.Link>
+          </Nav>
+          <Col xs="auto">
+            <Button type="submit" onClick={toggleTraducao}>Traduzir</Button>
+          </Col>
+        </Container>
+      </Navbar>
+      <Outlet />
+    </>
+  );
 }

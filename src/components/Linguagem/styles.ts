@@ -28,7 +28,7 @@ export const Linguagem = styled.div<LinguagemProps>`
     }
     
     .links{
-        text-decoration: none;
+        text-decoration: none!important;
         font-weight: bold;
         color: ${(props) => props.colorText};    
     }

@@ -6,7 +6,7 @@ import { useEffect } from "react";
 import Formacao from "../../components/Formacao";
 
 export default function Training(){
-    const {formacaoAcademica, getFormacoes } = useFormacaoAcademica(); 
+    const { formacaoAcademica, getFormacoes } = useFormacaoAcademica(); 
 
     useEffect(() => {
         getFormacoes();

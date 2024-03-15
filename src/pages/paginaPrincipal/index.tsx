@@ -24,9 +24,14 @@ import Angular from "../../assets/angular.png"
 import CSharp from "../../assets/csharp.png"
 import TypingAnimation from "../../components/TypingAnimation";
 import { CardProjeto } from "../../components/Card";
+import { useTranslation } from "react-i18next";
+import { useTraducao } from "../../contexts/Traducao/TraducaoProvider";
+
 export default function PaginaPrincipal(){
-    const {getLinguagens } = useLinguagens(); 
-    const {projetos, getProjetos } = useProjetos(); 
+    const { getLinguagens } = useLinguagens(); 
+    const { projetos, getProjetos } = useProjetos(); 
+    const { toggleTraducao } = useTraducao();
+    const { t } = useTranslation();
 
     useEffect(() => {
 		getLinguagens(); 
@@ -39,16 +44,12 @@ export default function PaginaPrincipal(){
                 <div className="content">
                     <div className="infos">
                         <div className="coluna">
-                    <ParagrafoCargo>DESENVOLVEDORA     FULL-STACK</ParagrafoCargo> <br />
+                    <ParagrafoCargo>{t('developer')}</ParagrafoCargo> <br />
                     <TypingAnimation text={"Hi, I'm Isabella"} />
                         <br />
 
                     <ParagrafoExplicativo>
-                    Como Desenvolvedora Web Full-Stack, minha expertise abrange a criação  e aprimoramento 
-                    de projetos com React, Angular, Typescript, C# e .NET, abarcando desde SPAs envolventes 
-                    até APIs robustas. Minha bagagem inclui amplo conhecimento de plataformas de desenvolvimento
-                    web, proficiência  em bancos de dados relacionais e experiência com sistemas de gerenciamento
-                    de versão (GIT) e a ferramenta Azure Devops.
+                    {t('resume')}
 
                     <br />
                     <br />
